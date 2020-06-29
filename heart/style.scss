@@ -1,0 +1,40 @@
+$pink: pink;
+$width: 150px;
+body{
+  background-color: #ced6e0;
+}
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .heart-container {
+    transform: rotate(-45deg);
+    #heart {
+      background-color: $pink;
+      height: 150px;
+      width: 150px;
+      &::before {
+        background-color: $pink;
+        content: "";
+        border-radius: 25%;
+        position: absolute;
+        width: $width;
+        height: $width;
+        top: 0px;
+        left: $width/2;
+        border-radius: 50%;
+      }
+      &::after {
+        content: "";
+        background-color: $pink;
+        border-radius: 50%;
+        position: absolute;
+        width: $width;
+        height: $width;
+        top: -$width/2;
+        left: 0px;
+      }
+    }
+  }
+}
