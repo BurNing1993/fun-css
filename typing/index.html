@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .typing {
+    width: 12em; height: 1.25em;
+    border-right: 1px solid transparent;
+    animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
+    font-family: Consolas, Monaco;
+    word-break: break-all;
+    overflow: hidden;
+}
+/* 打印效果 */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 12em; }
+}
+/* 光标闪啊闪 */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: currentColor; }
+}
+</style>
+<body>
+  <p class="typing">中英文mixed打字effect!</p>
+</body>
+</html>
