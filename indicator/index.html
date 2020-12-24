@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>indicator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+  body {
+    position: relative;
+  }
+
+  .indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right top, teal 50%, transparent 50%) no-repeat;
+    background-size: 100% calc(100% - 100vh + 5px);
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: darken;
+  }
+
+  .indicator::after {
+    content: '';
+    position: fixed;
+    top: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+  }
+
+  .space {
+    height: 200vh;
+  }
+</style>
+
+<body>
+  <div class="indicator"></div>
+  <div class="container">
+    <h1>滚动指示器</h1>
+    <div class="space border">
+      <p>占位</p>
+    </div>
+  </div>
+</body>
+
+</html>
